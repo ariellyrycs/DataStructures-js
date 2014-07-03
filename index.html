@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Data Structures in javascript</title>
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <input type="text" class="form-control" placeholder="Text input">
+                <input type="submit" />
+            </div>
+            <div>
+                <table class="table">
+                    <tr>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table class="table">
+                    <tr>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="jquery/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="structures/Linkedlist.js" ></script>
+        <script type="text/javascript" src="structures/Dictionary.js" ></script>
+
+
+        <script type="text/javascript" >
+        //Linked List usage
+            var cities = new LList();
+            cities.insert("Conway", "head");
+            console.log(cities.toString());
+            cities.insert("Russellville", "Conway");
+            cities.insert("Carlisle", "Russellville");
+            cities.insert("Alma", "Carlisle");
+            cities.display();
+
+            //.remove("Carlisle");
+            cities.display();
+        </script>
+    </body>
+</html>
