@@ -2,54 +2,207 @@
 <html lang="en">
     <head>
         <title> Data Structures in javascript</title>
-        <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap/yeti.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
     </head>
     <body>
+        <br><br><br><br>
         <div class="container-fluid">
-            <div>
-                <input type="text" class="form-control" placeholder="Text input">
-                <input type="submit" />
+            <!--LINKEDLIST -->
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">Linked List</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="input-group">
+                                <span class="input-group-addon">+</span>
+                                <input type="text" class="form-control" id="addLink" onkeyup="addDisable('addLink', 'sAdd')">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-primary" data-type="linkedList" id="add">Add</button>
+                                </span>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">Position</span>
+                                <input type="text" class="form-control" id="lInputAAdd" >
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn disabled" data-type="linkedList"  id="sAdd">Add</button>
+                                </span>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">-</span>
+                                <input type="text" class="form-control" id="lInputRemove">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-danger" data-type="linkedList" id="rem">Remove</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row" id="olLinkedList"></div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <table class="table">
-                    <tr>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </table>
+            <!--DICTIONARY -->
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">Dictionary</div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <div class="input-group">
+                                <span class="input-group-addon">+</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class=" btn btn-primary" data-type="dictionary">Add</button>
+                                </span>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">-</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class=" btn btn-danger" data-type="dictionary">Remove</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <ol class="list-unstyled">
+                                <li>asdasd</li>
+                                <li>asdasd</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <table class="table">
-                    <tr>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </table>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">Dictionary</div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <div class="input-group">
+                                <span class="input-group-addon">+</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class=" btn btn-primary" data-type="3">Add</button>
+                                </span>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">-</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class=" btn btn-danger" data-type="3">Remove</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <ol class="list-unstyled">
+                                <li>asdasd</li>
+                                <li>asdasd</li>
+                            </ol>
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-        <script type="text/javascript" src="jquery/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="structures/Linkedlist.js" ></script>
         <script type="text/javascript" src="structures/Dictionary.js" ></script>
-
-
         <script type="text/javascript" >
-        //Linked List usage
-            var cities = new LList();
-            cities.insert("Conway", "head");
-            console.log(cities.toString());
-            cities.insert("Russellville", "Conway");
-            cities.insert("Carlisle", "Russellville");
-            cities.insert("Alma", "Carlisle");
-            cities.display();
 
-            //.remove("Carlisle");
-            cities.display();
+            var insert = function (response, ol) {
+                var list = $('<ol>'),
+                    i,
+                    length = response[0].length - 1;
+                list.addClass('list-unstyled');
+                for(i = 0; i <= length ; i += 1 ){
+                    list.append( $('<li><label>' + response[0][i] + '</label><label>' + response[1][i] + '</label></li>') );
+                }
+                $('#'+ol).html(list);
+            }
+
+
+            var construct = (function ($){
+                var linkedList = new LList(),
+                    value,
+                    group,
+                    response,
+                    alerts = function (callObject, value){
+                        if(!callObject.initialized()){
+                            alert('Error. initialize first');
+                            return false;
+                        } else if(!callObject.exist(value)) {
+                            alert('Error. item doesn\'t exist');
+                            return false
+                        } else {
+                            return true
+                        }
+
+                };
+                   // map = new Dictionary();
+                return {
+                    adds: function (){
+                        group = $(this).attr('data-type');
+                        switch(group){
+                            case 'linkedList':
+                                value = $('#addLink').val();
+                                linkedList.add(value);
+                                response = linkedList.display();
+                                insert(response, 'olLinkedList');
+                                break;
+                            case 'dictionary':
+
+                                break;
+                        }
+                    },
+                    rem: function () {
+                        group = $(this).attr('data-type');
+                        switch(group) {
+                            case 'linkedList':
+                                value = $('#lInputRemove').val();
+                                if(alerts(linkedList, value)){
+                                    linkedList.remove(value)
+                                    response = linkedList.display();
+                                    insert(response, 'olLinkedList');
+                                }
+                                break;
+
+                        }
+                    },
+                    sAdd: function () {
+                        var context = $(this),
+                            lastValue;
+                        group = context.attr('data-type');
+                        switch(group){
+                            case 'linkedList':
+                                value = $('#lInputAAdd').val();
+                                lastValue = $('#addLink').val();
+                                if(alerts(linkedList, value)){
+                                    linkedList.insert(value, lastValue);
+                                    response = linkedList.display();
+                                    insert(response, 'olLinkedList');
+                                }
+                                break;
+                        }
+
+                    }
+                }
+            }(jQuery));
+            $('#add').click(construct.adds);
+            $('#rem').click(construct.rem);
+            $('#sAdd').click(construct.sAdd);
+
+
+            function addDisable(input, disable) {
+                var value = $('#' + input).val(),
+                        toDisable = $('#' + disable);
+                if(value === ''){
+                    toDisable.addClass('disabled');
+                } else {
+                    toDisable.removeClass('disabled');
+                }
+            }
         </script>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="327e64ec-3581-428d-ba58-bfb062a2ed24" name="Default" comment="" />
+    <list default="true" id="028803fa-cf9e-4c26-a3a5-115a81bf1b74" name="Default" comment="" />
     <ignored path="dataStructures JAVascript.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="551" selection-end="551" vertical-scroll-proportion="-0.034759358" vertical-offset="332" max-vertical-offset="1080">
+            <state line="108" column="14" selection-start="5586" selection-end="5586" vertical-scroll-proportion="48.48148" vertical-offset="3253" max-vertical-offset="3834">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Linkedlist.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Linkedlist.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/structures/Linkedlist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="1" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1116">
+            <state line="71" column="23" selection-start="2163" selection-end="2163" vertical-scroll-proportion="-0.36231884" vertical-offset="1503" max-vertical-offset="2124">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="Dictionary.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/structures/Dictionary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="21" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="666">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="666">
               <folding />
             </state>
           </provider>
@@ -60,20 +60,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/LinkedList.js" />
-        <option value="$PROJECT_DIR$/Dictionary.js" />
-        <option value="$PROJECT_DIR$/Linkedlist.js" />
-        <option value="$PROJECT_DIR$/jquery/jquery-migrate-1.2.1.min.js" />
-        <option value="$PROJECT_DIR$/bootstrap/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/structures/Linkedlist.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1364" />
-    <option name="width" value="1444" />
-    <option name="height" value="902" />
+    <option name="x" value="-2" />
+    <option name="y" value="22" />
+    <option name="width" value="1370" />
+    <option name="height" value="748" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -82,10 +80,16 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Invalid elementsCSS</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>CoffeeScript</id>
+            <id>CssInvalidPseudoSelector</id>
           </State>
         </selected-state>
       </profile-state>
@@ -160,7 +164,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -174,6 +178,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -183,17 +191,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="editing.templates" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/integralequations" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/structures" />
+      <recent name="$PROJECT_DIR$/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -219,20 +222,20 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="327e64ec-3581-428d-ba58-bfb062a2ed24" name="Default" comment="" />
-      <created>1404097073475</created>
-      <updated>1404097073475</updated>
+      <changelist id="028803fa-cf9e-4c26-a3a5-115a81bf1b74" name="Default" comment="" />
+      <created>1404467014322</created>
+      <updated>1404467014322</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1364" y="0" width="1444" height="902" extended-state="6" />
+    <frame x="-2" y="22" width="1370" height="748" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21111111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09050445" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -254,12 +257,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09050445" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -288,106 +291,63 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="63" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="612">
+        <state line="171" column="44" selection-start="8046" selection-end="8054" vertical-scroll-proportion="0.0" vertical-offset="2686" max-vertical-offset="3636">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/structures/Linkedlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="1" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1116">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structures/Dictionary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="666">
+        <state line="47" column="40" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2034">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="36" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="2196">
+        <state line="6" column="48" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="2335" max-vertical-offset="3456">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="3438" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="36" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="2196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="3438" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="26" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.0" vertical-offset="1352" max-vertical-offset="2196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="3438" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="17" selection-start="1484" selection-end="1490" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3438" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structures/Dictionary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jquery/jquery-migrate-1.2.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="3" selection-start="117" selection-end="117" vertical-scroll-proportion="0.023622047" vertical-offset="0" max-vertical-offset="762">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/structures/Linkedlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="1" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="341" max-vertical-offset="1116">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/structures/Dictionary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="109235" selection-start="109400" selection-end="109400" vertical-scroll-proportion="0.09448819" vertical-offset="0" max-vertical-offset="762">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="1" selection-start="23" selection-end="23" vertical-scroll-proportion="0.05598756" vertical-offset="0" max-vertical-offset="643">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="551" selection-end="551" vertical-scroll-proportion="-0.034759358" vertical-offset="332" max-vertical-offset="1080">
+        <state line="108" column="14" selection-start="5586" selection-end="5586" vertical-scroll-proportion="48.48148" vertical-offset="3253" max-vertical-offset="3834">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/structures/Dictionary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/structures/Linkedlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="23" selection-start="2163" selection-end="2163" vertical-scroll-proportion="-0.36231884" vertical-offset="1503" max-vertical-offset="2124">
           <folding />
         </state>
       </provider>
