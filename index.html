@@ -19,23 +19,23 @@
                         <div class="row">
                             <div class="input-group">
                                 <span class="input-group-addon">+</span>
-                                <input type="text" class="form-control" id="addLink" onkeyup="addDisable('addLink', 'sAdd')">
+                                <input type="text" class="form-control" id="addLink" onkeyup="addDisable('addLink', 'linkdisable')">
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-primary" data-type="linkedList" id="add">Add</button>
+                                    <button type="button" class="add btn btn-primary" data-type="linkedList">Add</button>
                                 </span>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">Position</span>
                                 <input type="text" class="form-control" id="lInputAAdd" >
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn disabled" data-type="linkedList"  id="sAdd">Add</button>
+                                    <button type="button" class="sAdd btn btn disabled" data-type="linkedList" id="linkdisable">Add</button>
                                 </span>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">-</span>
                                 <input type="text" class="form-control" id="lInputRemove">
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-danger" data-type="linkedList" id="rem">Remove</button>
+                                    <button type="button" class="rem btn btn-danger" data-type="linkedList">Remove</button>
                                 </span>
                             </div>
                         </div>
@@ -51,25 +51,25 @@
                         <div class="row">
 
                             <div class="input-group">
-                                <span class="input-group-addon">+</span>
-                                <input type="text" class="form-control">
+                                <span class="input-group-addon">Key</span>
+                                <input type="text" class="form-control" id="id_DicKey" onkeyup="addDisable('id_DicKey', 'dicAdd');">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">Value</span>
+                                <input type="text" class="form-control" id="id_DicValue">
                                 <span class="input-group-btn">
-                                    <button type="button" class=" btn btn-primary" data-type="dictionary">Add</button>
+                                    <button type="button" class="add btn btn-primary disabled" data-type="dictionary" id="dicAdd">Add</button>
                                 </span>
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon">-</span>
-                                <input type="text" class="form-control">
+                                <span class="input-group-addon">Key</span>
+                                <input type="text" class="form-control" id="id_DicKey2" onkeyup="addDisable('id_DicKey2', 'dicRemove')">
                                 <span class="input-group-btn">
-                                    <button type="button" class=" btn btn-danger" data-type="dictionary">Remove</button>
+                                    <button type="button" class="rem btn btn-danger disabled" data-type="dictionary" id="dicRemove">Remove</button>
                                 </span>
                             </div>
                         </div>
-                        <div class="row" >
-                            <ol class="list-unstyled">
-                                <li>asdasd</li>
-                                <li>asdasd</li>
-                            </ol>
+                        <div class="row" id="olDictionary" >
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
         <script type="text/javascript" src="structures/Dictionary.js" ></script>
         <script type="text/javascript" >
 
-            var insert = function (response, ol) {
+            var append = function (response, ol) {
                 var list = $('<ol>'),
                     i,
                     length = response[0].length - 1;
@@ -119,16 +119,18 @@
                 for(i = 0; i <= length ; i += 1 ){
                     list.append( $('<li><label>' + response[0][i] + '</label><label>' + response[1][i] + '</label></li>') );
                 }
-                $('#'+ol).html(list);
+                $('#' + ol).html(list);
             }
 
 
             var construct = (function ($){
                 var linkedList = new LList(),
+                    dic = new Dictionary(),
                     value,
                     group,
                     response,
-                    alerts = function (callObject, value){
+                    key,
+                    lLalerts = function (callObject, value){
                         if(!callObject.initialized()){
                             alert('Error. initialize first');
                             return false;
@@ -139,8 +141,24 @@
                             return true
                         }
 
+                    },
+                    dicAlerts = function (key, value) {
+                        if(key === ''){
+                            alert('add a value first');
+                            return false;
+                        } else if(!onlyNumbers(value)) {
+                            alert('key must be a Number');
+                            return false;
+                        }
+                        return true;
+                    },
+                    dicRemoveAlerts = function (key) {
+                        if(key === '' ||  !dic.find(key)) {
+                            alert('It couldn\'t be able to remove it.');
+                            return false;
+                        }
+                        return true;
                 };
-                   // map = new Dictionary();
                 return {
                     adds: function (){
                         group = $(this).attr('data-type');
@@ -149,10 +167,16 @@
                                 value = $('#addLink').val();
                                 linkedList.add(value);
                                 response = linkedList.display();
-                                insert(response, 'olLinkedList');
+                                append(response, 'olLinkedList');
                                 break;
                             case 'dictionary':
-
+                                key = $('#id_DicKey').val();
+                                value = $('#id_DicValue').val();
+                                if(dicAlerts(key, value)){
+                                    dic.add(key, value);
+                                    response = dic.showAll();
+                                    append(response, 'olDictionary');
+                                }
                                 break;
                         }
                     },
@@ -161,10 +185,18 @@
                         switch(group) {
                             case 'linkedList':
                                 value = $('#lInputRemove').val();
-                                if(alerts(linkedList, value)){
-                                    linkedList.remove(value)
+                                if(lLalerts(linkedList, value)){
+                                    linkedList.remove(value);
                                     response = linkedList.display();
-                                    insert(response, 'olLinkedList');
+                                    append(response, 'olLinkedList');
+                                }
+                                break;
+                            case 'dictionary':
+                                key = $('#id_DicKey2').val();
+                                if(dicRemoveAlerts(key)) {
+                                    dic.remove(key);
+                                    response = dic.showAll();
+                                    append(response, 'olDictionary');
                                 }
                                 break;
 
@@ -178,10 +210,10 @@
                             case 'linkedList':
                                 value = $('#lInputAAdd').val();
                                 lastValue = $('#addLink').val();
-                                if(alerts(linkedList, value)){
+                                if(lLalerts(linkedList, value)){
                                     linkedList.insert(value, lastValue);
                                     response = linkedList.display();
-                                    insert(response, 'olLinkedList');
+                                    append(response, 'olLinkedList');
                                 }
                                 break;
                         }
@@ -189,9 +221,9 @@
                     }
                 }
             }(jQuery));
-            $('#add').click(construct.adds);
-            $('#rem').click(construct.rem);
-            $('#sAdd').click(construct.sAdd);
+            $('.add').click(construct.adds);
+            $('.rem').click(construct.rem);
+            $('.sAdd').click(construct.sAdd);
 
 
             function addDisable(input, disable) {
@@ -202,6 +234,9 @@
                 } else {
                     toDisable.removeClass('disabled');
                 }
+            }
+            function onlyNumbers(value) {
+                return parseInt(value) == value;
             }
         </script>
     </body>

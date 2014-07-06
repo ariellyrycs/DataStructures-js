@@ -1,32 +1,25 @@
 /**
  * Created by arobles on 7/3/14.
  */
-function Dictionary() {
-    this.add = add;
+
+var Dictionary = function () {
     this.datastore = new Array();
-    this.find = find;
-    this.remove = remove;
-    this.showAll = showAll;
-}
-function add(key, value){
-    this.datastore[key] = value;
-}
-function find(key) {
-    return this.datastore[key];
-}
-function remove(key) {
-    delete this.datastore[key];
-}
-function showAll() {
-    console.log(this.datastore);
-    for (var key in Object.keys(this.datastore)) {
-        console.log(key + "->" + this.datastore[key]);
+    this.add = function (key, value){
+        this.datastore[key] = value;
+    }
+    this.find = function (key) {
+        return !!this.datastore[key];
+    }
+    this.remove = function (key) {
+        delete this.datastore[key];
+    }
+    this.showAll = function () {
+        var array = new Array([],[]),
+            i = 0;
+        for (var key in this.datastore) {
+            array[0][i] = key;
+            array[1][i++] = this.datastore[key];
+        }
+        return array;
     }
 }
-var pbook = new Dictionary();
-pbook.add("mike", "123");
-pbook.add("david", "345");
-pbook.add("cynthia", "456");
-console.log('david is a extension :' + pbook.find('david'));
-pbook.remove("david");
-pbook.showAll();
